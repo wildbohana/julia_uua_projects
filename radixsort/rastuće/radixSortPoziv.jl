@@ -1,8 +1,6 @@
 include("radixSortFunkcija.jl")
 
-
 A=rand(1:100, 15)
-
 n=length(A)
 
 print("Niz prije sorta: ")
