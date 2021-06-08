@@ -3,7 +3,7 @@ function getMax(A, n)
 	minIdx=1
 	for i=2:n
 		if A[i]>A[minIdx]
-			minIdx = i
+			minIdx=i
 		end
 	end
 return A[minIdx]
