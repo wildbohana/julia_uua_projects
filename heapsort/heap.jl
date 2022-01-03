@@ -5,37 +5,37 @@ struct Student
 end
 
 function heapsort!(A)
-    global size
+    global velicina
     build_max_heap!(A)
     for i = length(A):-1:2
         temp = A[1]
         A[1] = A[i]
         A[i] = temp
-        size = size-1
+        velicina = velicina-1
         max_heapify!(A,1)
     end
 end
 
 function build_max_heap!(A)
-    global size 
-    size = length(A)
+    global velicina 
+    velicina = length(A)
     for i = (Int(floor(length(A)/2))):-1:1
         max_heapify!(A,i)
     end
 end
 
 function max_heapify!(A,i)
-    global size
+    global velicina
     l = 2*i
     r = 2*i+1
 
     
-    if l <= size && uporedi(A[l], A[i])
+    if l <= velicina && uporedi(A[l], A[i])
         largest = l
     else
         largest = i
     end
-    if r <= size && uporedi(A[r], A[largest])
+    if r <= velicina && uporedi(A[r], A[largest])
         largest = r
     end
 
